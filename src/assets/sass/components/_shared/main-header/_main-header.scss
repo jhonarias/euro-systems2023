@@ -7,42 +7,77 @@
         line-height: $header-height;
         background: #fff;
         color: $header-color;
-
-        .sidenav-trigger {
-            height: $header-height;
-            color: $header-color;
-
-            i {
-                height: $header-height;
-                line-height: $header-height;
-            }
-        }
-
-        .brand-logo {
-            display: inline-flex;
-            height: 100%;
-            align-items: center;
-
-            img {
-                height: calculateRem(45px);
-                max-width: 80%;
-            }
-        }
-
         ul {
             a {
                 @include font-size($f-size-sm);
                 color: $header-color;
                 text-transform: uppercase;
+                &:hover {
+                    background: transparent;
+                }
             }
         }
 
-        .dropdown-trigger_label {
-            border-bottom: 1px solid $header-color;
-        }
+    }
+    .sidenav-trigger {
+        height: $header-height;
+        color: $header-color;
 
-        .dropdown-content {
-            min-width: calculateRem(230px);
+        i {
+            height: $header-height;
+            line-height: $header-height;
+        }
+    }
+
+    .brand-logo {
+        display: inline-flex;
+        height: 100%;
+        align-items: center;
+
+        img {
+            height: calculateRem(45px);
+        }
+    }
+
+    .btn-primary {
+        padding: 0 calculateRem(4px);
+        height: auto;
+        line-height: initial;
+        font-weight: $f-weight-normal;
+    }
+
+    .dropdown-trigger {
+        &:focus, &:focus-visible { outline: none; }
+    }
+
+    .dropdown-trigger_label {
+        border-bottom: 1px solid $header-color;
+    }
+
+    .dropdown-content {
+        min-width: calculateRem(220px);
+        background: $c-color7;
+        box-shadow: 0 4px 10px -2px rgba(#000, 0.1);
+        top: 100% !important;
+        li {
+            background: $c-color7;
+            min-height: auto;
+            a {
+                @include font-size(13px);
+                color: #fff;
+                padding: 8px 20px;
+            }
+        }
+    }
+
+    .sidenav {
+        li { position: relative; }
+    }
+
+    @media #{$tablet-landscape} {
+        &>nav {
+            padding-top: calculateRem(12px);
+            box-sizing: border-box;
         }
     }
 }

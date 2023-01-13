@@ -1,6 +1,25 @@
 .main-footer_wrap {
   background: $c-color2;
   padding: calculateRem(40px) 0 calculateRem(60px) 0;
+  position: relative;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: calculateRem(-8px);
+    left: 0;
+    height: calculateRem(8px);
+    width: 50%;
+  }
+
+  &::before {
+    background: $c-color4;
+  }
+  &::after {
+    left: auto;
+    right: 0;
+    background: $c-primary;
+  }
 }
 
 .main-footer {
@@ -9,7 +28,7 @@
   flex-wrap: wrap;
   @include font-size($f-size-sm);
   column-gap: calculateRem(50px);
-
+ 
   a {
     color: $c-primary;
   }
@@ -29,7 +48,7 @@
     @include font-size($f-size-sm);
     text-transform: uppercase;
     margin: 0;
-    font-weight: 600;
+    font-weight: $f-weight-medium;
     color: $c-secundary;
   }
 
@@ -38,6 +57,13 @@
   }
 }
 
+@media #{$tablet-portrait} {
+  .main-footer_col {
+    &:first-child {
+      width: 25.133%;
+    }
+  }
+}
 
 @media #{$tablet-landscape} {
   .main-footer {
@@ -45,9 +71,12 @@
   }
 }
 
-@media #{$until-mobile-sm} {
+@media #{$until-tablet-portrait} {
   .main-footer {
-    row-gap: 20px;
+    row-gap: calculateRem(20px);
     text-align: center;
+  }
+  .main-footer_col {
+    width: 100%;
   }
 }

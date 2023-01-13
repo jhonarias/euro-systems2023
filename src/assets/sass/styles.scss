@@ -6,9 +6,9 @@
 //
 // ****************************************
 
-// html,body {
-// 	height: 100%;
-// }
+html,body {
+	height: 100%;
+}
 html {
 	font-size: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -36,24 +36,24 @@ body {
 	padding: 0 calculateRem(16px);
 }
 
-.breadcrub_container {
+.breadcrumb_container {
 	background: $c-color1;
 	padding: calculateRem(50px) 0;
 	text-align: center;
 }
 
-.breadcrub-title {
+.breadcrumb-title {
 	@include font-size($f-size-lg);
 	margin-top: 0;
-	font-weight: 600;
-	text-transform: uppercase;
+	font-weight: $f-weight-medium;
+	font-family: $font-orator-name;
 }
 
-.breadcrub-list {
+.breadcrumb-list {
 	display: inline-flex;
 	margin: 0;
 	@include font-size($f-size);
-
+	font-family: $font-orator-name;
 	li {
 		a {
 			color: $c-secundary;
@@ -71,34 +71,35 @@ body {
 }
 
 @media #{$tablet-portrait} {
-	.breadcrub_container {
+	.breadcrumb_container {
 		padding: calculateRem(85px) 0;
 	}
 
-	.breadcrub-title {
+	.breadcrumb-title {
 		font-size: calculateRem(52px);
 	}
 
-	.breadcrub-list {
+	.breadcrumb-list {
 		@include font-size($f-size-md-xxl);
 	}
 }
 
 .our-partners {
-	padding: calculateRem(40px) 0 calculateRem(90px);
+	padding-bottom: calculateRem(90px);
 	background: $c-color5;
+	font-family: $font-orator-name;
 
-	h2 {
+	.our-partners_title {
 		@include font-size($f-size-xlgx);
 		margin-bottom: calculateRem(30px);
 		margin-top: 0;
 		text-align: center;
-		font-weight: 600;
+		font-weight: $f-weight-medium;
 		text-transform: uppercase;
 		color: $c-secundary;
 	}
 
-	ul {
+	.our-partners_list {
 		display: flex;
 		flex-wrap: wrap;
 		margin: 0 calculateRem(-15px);
@@ -141,51 +142,69 @@ body {
 }
 
 .form_container {
-	h2 {
-		font-size: 40px;
-		font-weight: 600;
-		color: #7A7A7A;
-		text-transform: uppercase;
+	margin-bottom: calculateRem(30px);
+	.form-title {
+		@include font-size($f-size-xlgx);
+		font-weight: $f-weight-medium;
+		color: $c-primary;
 		margin-top: 0;
-		font-family: "Orator W01 Medium", Sans-serif;
+		font-family: $font-orator-name;
 	}
 
-	p {
+	.form-description {
 		margin-top: 0;
-		margin-bottom: 30px;
+		margin-bottom: calculateRem(30px);
+		font-family: $font-orator-name;
 	}
 
 	.form-group {
-		margin-bottom: 12px;
+		margin-bottom: calculateRem(12px);
 
-		label {
+		.ui-label {
 			@include hide-visually;
 		}
 		textarea {
 			height: 100%;
 		}
-		textarea, input {
+		select {
+			display: block;
+		}
+		textarea, input, select {
 			margin-bottom: 0 !important;
-			border-radius: 2px;
-			border: 1px solid #dddddd;
-			padding: 12px;
+			border-radius: calculateRem(2px);
+			border: 1px solid $c-color4;
+			padding: calculateRem(12px);
 			box-sizing: border-box;
-			background: #fafafa;
+			background: $c-color6;
+			font-family: $font-orator-name;
 		}
 
 		input {
-			height: 45px;
+			height: calculateRem(45px);
 		}
 
-		span {
-			color: #4B4F58;
-			margin-top: 4px;
+		.btn-inverse {
+			@include font-size($f-size-md-xxl);
+			font-family: $font-orator-name;
+			text-transform: inherit;
+		}
+
+		.form-message {
+			@include font-size($f-size-sm);
 			display: block;
-			font-size: 15px;
+			margin-top: calculateRem(4px);
 		}
 	}
 }
 
 .section-padding-top {
-	padding-top: 60px;
+	padding-top: calculateRem(60px);
+}
+
+.section-padding-bottom {
+	padding-bottom: calculateRem(60px);
+}
+
+.table {
+	font-family: $font-orator-name;
 }

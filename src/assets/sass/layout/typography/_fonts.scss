@@ -1,20 +1,20 @@
-@font-face {
-  font-family: "Orator W01 Medium";
-  font-display: auto;
-  font-fallback: Serif;
-  font-weight: 400;
-  src: url(https://entroutweb.com/client/eurosystemsusa/wp-content/uploads/2022/07/Orator-W01-Medium.woff2) format('woff2'), url(https://entroutweb.com/client/eurosystemsusa/wp-content/uploads/2022/07/Orator-W01-Medium.woff) format('woff'), url(https://entroutweb.com/client/eurosystemsusa/wp-content/uploads/2022/07/Orator-W01-Medium.ttf) format('TrueType'), url(https://entroutweb.com/client/eurosystemsusa/wp-content/uploads/2022/07/Orator-W01-Medium.eot) format('eot'), url(https://entroutweb.com/client/eurosystemsusa/wp-content/uploads/2022/07/Orator-W01-Medium.svg) format('svg'), url(https://entroutweb.com/client/eurosystemsusa/wp-content/uploads/2022/07/Orator-W01-Medium.otf) format('OpenType');
-}
-
 // @font-face {
 //   font-family: "Orator W01 Medium";
 //   font-display: auto;
 //   font-fallback: Serif;
-//   font-weight: 400;
-//   src: url('../../../fonts/Orator-W01-Medium.woff2') format('woff2'),
-//     url(../../../fonts/Orator-W01-Medium.woff) format('woff'),
-//     url(../../../fonts/Orator-W01-Medium.ttf) format('TrueType'),
-//     url(../../../fonts/Orator-W01-Medium.eot) format('eot'),
-//     url(../../../fonts/Orator-W01-Medium.svg) format('svg'),
-//     url(../../../fonts/Orator-W01-Medium.otf) format('OpenType');
+//   font-weight: $f-weight-normal;
+//   src: url(https://entroutweb.com/client/eurosystemsusa/wp-content/uploads/2022/07/Orator-W01-Medium.woff2) format('woff2'), url(https://entroutweb.com/client/eurosystemsusa/wp-content/uploads/2022/07/Orator-W01-Medium.woff) format('woff'), url(https://entroutweb.com/client/eurosystemsusa/wp-content/uploads/2022/07/Orator-W01-Medium.ttf) format('TrueType'), url(https://entroutweb.com/client/eurosystemsusa/wp-content/uploads/2022/07/Orator-W01-Medium.eot) format('eot'), url(https://entroutweb.com/client/eurosystemsusa/wp-content/uploads/2022/07/Orator-W01-Medium.svg) format('svg'), url(https://entroutweb.com/client/eurosystemsusa/wp-content/uploads/2022/07/Orator-W01-Medium.otf) format('OpenType');
 // }
+
+@font-face {
+  font-family: "Orator W01 Medium";
+  font-display: auto;
+  font-fallback: Serif;
+  font-weight: $f-weight-normal;
+  src: url('http://127.0.0.1:5500/src/assets/fonts/Orator-W01-Medium.woff2') format('woff2'),
+    url(#{$path-typography}/Orator-W01-Medium.woff) format('woff'),
+    url(#{$path-typography}/Orator-W01-Medium.ttf) format('TrueType'),
+    url(#{$path-typography}/Orator-W01-Medium.eot) format('eot'),
+    url(#{$path-typography}/Orator-W01-Medium.svg) format('svg'),
+    url(#{$path-typography}/Orator-W01-Medium.otf) format('OpenType');
+}

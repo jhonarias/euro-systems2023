@@ -75,7 +75,7 @@
 
 @mixin btn-primary {
 	@include button-generator($btn-primary-color, $btn-primary-bg, $btn-primary-border, lighter);
-	font-weight: 600;
+	font-weight: $f-weight-medium;
 	border-width: 1px;
 	border-style: solid;
   box-shadow: none;
