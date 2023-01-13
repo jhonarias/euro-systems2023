@@ -11,7 +11,7 @@
   font-display: auto;
   font-fallback: Serif;
   font-weight: $f-weight-normal;
-  src: url('http://127.0.0.1:5500/src/assets/fonts/Orator-W01-Medium.woff2') format('woff2'),
+  src: url(#{$path-typography}/Orator-W01-Medium.woff2) format('woff2'),
     url(#{$path-typography}/Orator-W01-Medium.woff) format('woff'),
     url(#{$path-typography}/Orator-W01-Medium.ttf) format('TrueType'),
     url(#{$path-typography}/Orator-W01-Medium.eot) format('eot'),

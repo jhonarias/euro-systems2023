@@ -4581,7 +4581,7 @@ readers do not read off random characters that represent icons */
   font-display: auto;
   font-fallback: Serif;
   font-weight: 400;
-  src: url("http://127.0.0.1:5500/src/assets/fonts/Orator-W01-Medium.woff2") format("woff2"), url(./src/assets/fonts/Orator-W01-Medium.woff) format("woff"), url(./src/assets/fonts/Orator-W01-Medium.ttf) format("TrueType"), url(./src/assets/fonts/Orator-W01-Medium.eot) format("eot"), url(./src/assets/fonts/Orator-W01-Medium.svg) format("svg"), url(./src/assets/fonts/Orator-W01-Medium.otf) format("OpenType"); }
+  src: url(../src/assets/fonts/Orator-W01-Medium.woff2) format("woff2"), url(../src/assets/fonts/Orator-W01-Medium.woff) format("woff"), url(../src/assets/fonts/Orator-W01-Medium.ttf) format("TrueType"), url(../src/assets/fonts/Orator-W01-Medium.eot) format("eot"), url(../src/assets/fonts/Orator-W01-Medium.svg) format("svg"), url(../src/assets/fonts/Orator-W01-Medium.otf) format("OpenType"); }
 
 .ui-form_grid.ui-form_grid--allfullwidth {
   margin: 0; }
