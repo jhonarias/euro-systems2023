@@ -1,0 +1,13 @@
+// + Overlay
+// -------
+.ui-overlay {
+	@include overlay-style();
+}
+
+.text-center {
+	text-align: center;
+}
+
+.background-color1 {
+	background: $c-color5;
+}
