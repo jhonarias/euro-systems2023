@@ -31,9 +31,6 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
-    <link href="//db.onlinewebfonts.com/c/daf8c1a0f06e7a24d9dca48b9d88dac0?family=OratorW01-Medium" rel="stylesheet"
-        type="text/css" />
-
     <title>Euro System</title>
 </head>
 
@@ -84,6 +81,8 @@
                         </ul>
                     </div>
                 </nav>
+
+                <!-- responsive -->
                 <ul id="header-menu-mobile" class="sidenav">
                     <li>
                         <a class="dropdown-trigger" href='#' data-target='dropdown_1'>
@@ -201,19 +200,11 @@
                                             <th>#</th>
                                             <th>first name</th>
                                             <th>last name</th>
-                                            <th>first name</th>
-                                            <th>last name</th>
-                                            <th>first name</th>
-                                            <th>last name</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td>1</td>
-                                            <td>John Doe</td>
-                                            <td>John Arias</td>
-                                            <td>John Doe</td>
-                                            <td>John Arias</td>
                                             <td>John Doe</td>
                                             <td>John Arias</td>
                                         </tr>
@@ -336,23 +327,20 @@
     <script>
         $(document).ready(function () {
             $('.sidenav').sidenav();
-        });
-
-        if (window.innerWidth > 992) {
-            console.log('as');
-            $('.dropdown-trigger').dropdown({
-                inDuration: 300,
-                outDuration: 225,
-                constrain_width: false, // Does not change width of dropdown to that of the activator
-                hover: true, // Activate on hover
-                belowOrigin: false, // Displays dropdown below the button
-                alignment: 'bottom' // Displays dropdown with edge aligned to the left of button
+            if (window.innerWidth > 992) {
+                $('.dropdown-trigger').dropdown({
+                    inDuration: 300,
+                    outDuration: 225,
+                    constrain_width: false, // Does not change width of dropdown to that of the activator
+                    hover: true, // Activate on hover
+                    belowOrigin: false, // Displays dropdown below the button
+                    alignment: 'left' // Displays dropdown with edge aligned to the left of button
+                }
+                );
+            } else {
+                $('.dropdown-trigger').dropdown();
             }
-            );
-        } else {
-            console.log('123');
-            $('.dropdown-trigger').dropdown();
-        }
+        });
     </script>
 </body>
 
